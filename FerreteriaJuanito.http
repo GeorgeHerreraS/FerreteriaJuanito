@@ -1,6 +1,6 @@
-@FerreteriaJuanito_HostAddress = http://localhost:5236
+@FerreteriaJuanito_HostAddress = https://localhost:7017/
 
-GET {{FerreteriaJuanito_HostAddress}}/weatherforecast/
+GET {{FerreteriaJuanito_HostAddress}}/CarroCompra
 Accept: application/json
 
 ###
