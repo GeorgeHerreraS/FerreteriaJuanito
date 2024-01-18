@@ -23,7 +23,11 @@ namespace FerreteriaJuanito.Controllers.Flujo
 {
     [Route("api/[controller]")]
     [ApiController]
+<<<<<<< HEAD
     [TypeFilter(typeof(MyException))]
+=======
+   // [TypeFilter(typeof(MyException))]
+>>>>>>> cc03b0f2144186cc491a04cdb221eddff19116f5
     public class FerreteriaController : ControllerBase
     {
         private readonly IConfiguration _config;
