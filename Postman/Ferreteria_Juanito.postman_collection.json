@@ -1,0 +1,1569 @@
+{
+	"info": {
+		"_postman_id": "b18baf1d-cd99-4914-a09a-b8049cf05a29",
+		"name": "Ferreteria_Juanito",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Directo",
+			"item": [
+				{
+					"name": "api/Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}{{getUsuario}}",
+							"host": [
+								"{{url}}{{getUsuario}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginJwt",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emaillogin\": \"georgeherresan@icloud.com\",\n    \"passwordLogin\": \"Herresan1981\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}api/Login",
+							"host": [
+								"{{url}}api"
+							],
+							"path": [
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idTipoUsuario\": 1,\n  \"nombreUsuario\": \"George Herrera\",\n  \"direccionUsuario\": \"Paillao 4866\",\n  \"telefonoUsuario\": \"981289928\",\n  \"email\": \"georgeherresan@icloud.com\",\n  \"password\": \"Herresan1981\",\n  \"rol\": \"Administrador\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Usuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddDespacho",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n  \"idUsuario\": 1,\n  \"idCarroCompra\": 1,\n  \"descDespacho\": \"casa 1\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Despacho",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Despacho"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddMedioPago",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"descMedioPago\": \"Transferencia\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/MedioPago",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"MedioPago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProducto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idProveedor\": 1,\n  \"descProducto\": \"Martillo\",\n  \"valorProducto\": 1000,\n  \"cantidadProducto\":10\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Producto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddProveedor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idProducto\": 1,\n  \"nombreProveedor\": \"casa matriz\",\n  \"direccionProveedor\": \"algun lugar 123\",\n  \"telefonoProveedor\": \"275123658\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Proveedor",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddTipoUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"descTipoUsuario\": \"Administrador\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/TipoUsuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"TipoUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCarroCompra",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7017/api/CarroCompra",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"CarroCompra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProducto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7017/api/Producto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PutProducto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n  {\n    \"id\": 3,\n    \"idProveedor\": 2,\n    \"descProducto\": \"Combo\",\n    \"valorProducto\": 10000,\n    \"cantidadProducto\": 10\n  }\n"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Producto",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Producto"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flujo",
+			"item": [
+				{
+					"name": "Cliente",
+					"item": [
+						{
+							"name": "GetAllProductoCli",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/GetAllProductoCli",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"GetAllProductoCli"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAllProductoCli200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/GetAllProductoCli",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"GetAllProductoCli"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:38:26 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"descProducto\": \"Martillo electrico\",\n        \"valorProducto\": 10000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GetAllCarroHistCli",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/GetAllCarroHistCli/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"GetAllCarroHistCli",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAllCarroHistCli404",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/GetAllCarroHistCli/",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"GetAllCarroHistCli",
+												""
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:53:18 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"description\": \"ERRFER001\",\n    \"type\": \"No Existe registro solicitado 2\",\n    \"code\": 404\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Administrador",
+					"item": [
+						{
+							"name": "ListUsers",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/ListUsers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"ListUsers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addUsers",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idTipoUsuario\": 2,\n  \"nombreUsuario\": \"clientes\",\n  \"direccionUsuario\": \"casaaa ccd\",\n  \"telefonoUsuario\": \"9658632552\",\n  \"email\": \"algo@ak.cl\",\n  \"password\": \"12345\",\n  \"rol\": \"xx\"\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/addUsers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"addUsers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "addUsers200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idTipoUsuario\": 2,\n    \"nombreUsuario\": \"clientes\",\n    \"direccionUsuario\": \"casaaa ccd\",\n    \"telefonoUsuario\": \"9658632552\",\n    \"email\": \"algo@ak.cl\",\n    \"password\": \"12345\",\n    \"rol\": \"xx\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/addUsers",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"addUsers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:20:21 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"idTipoUsuario\": 1,\n        \"nombreUsuario\": \"George Herrera\",\n        \"direccionUsuario\": \"Paillao 4866\",\n        \"telefonoUsuario\": \"981289928\",\n        \"email\": \"georgeherresan@icloud.com\",\n        \"password\": \"Herresan1981\",\n        \"rol\": \"Administrador\"\n    },\n    {\n        \"id\": 2,\n        \"idTipoUsuario\": 2,\n        \"nombreUsuario\": \"clientes\",\n        \"direccionUsuario\": \"casaaa ccd\",\n        \"telefonoUsuario\": \"9658632552\",\n        \"email\": \"algo@ak.cl\",\n        \"password\": \"12345\",\n        \"rol\": \"xx\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "DeleteUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/DeleteUsers?id=3",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"DeleteUsers"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "DeleteUsers200",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/DeleteUsers?id=3",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"DeleteUsers"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:22:42 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"idTipoUsuario\": 1,\n        \"nombreUsuario\": \"George Herrera\",\n        \"direccionUsuario\": \"Paillao 4866\",\n        \"telefonoUsuario\": \"981289928\",\n        \"email\": \"georgeherresan@icloud.com\",\n        \"password\": \"Herresan1981\",\n        \"rol\": \"Administrador\"\n    },\n    {\n        \"id\": 2,\n        \"idTipoUsuario\": 2,\n        \"nombreUsuario\": \"clientes\",\n        \"direccionUsuario\": \"casaaa ccd\",\n        \"telefonoUsuario\": \"9658632552\",\n        \"email\": \"algo@ak.cl\",\n        \"password\": \"12345\",\n        \"rol\": \"xx\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "UpdateUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 0,\n  \"idTipoUsuario\": 0,\n  \"nombreUsuario\": \"string\",\n  \"direccionUsuario\": \"string\",\n  \"telefonoUsuario\": \"string\",\n  \"email\": \"string\",\n  \"password\": \"string\",\n  \"rol\": \"string\"\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/UpdateUsers",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"UpdateUsers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "UpdateUsers200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n \"id\": 2,\n        \"idTipoUsuario\": 2,\n        \"nombreUsuario\": \"testclientes\",\n        \"direccionUsuario\": \"casaaa ccd\",\n        \"telefonoUsuario\": \"9658632552\",\n        \"email\": \"algo@ak.cl\",\n        \"password\": \"12345\",\n        \"rol\": \"xx\"\n}"
+										},
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/UpdateUsers",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"UpdateUsers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:25:38 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"idTipoUsuario\": 1,\n        \"nombreUsuario\": \"George Herrera\",\n        \"direccionUsuario\": \"Paillao 4866\",\n        \"telefonoUsuario\": \"981289928\",\n        \"email\": \"georgeherresan@icloud.com\",\n        \"password\": \"Herresan1981\",\n        \"rol\": \"Administrador\"\n    },\n    {\n        \"id\": 2,\n        \"idTipoUsuario\": 2,\n        \"nombreUsuario\": \"testclientes\",\n        \"direccionUsuario\": \"casaaa ccd\",\n        \"telefonoUsuario\": \"9658632552\",\n        \"email\": \"algo@ak.cl\",\n        \"password\": \"12345\",\n        \"rol\": \"xx\"\n    }\n]"
+								},
+								{
+									"name": "UpdateUsers404ErrorId",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n \"id\": 3,\n        \"idTipoUsuario\": 2,\n        \"nombreUsuario\": \"testclientes\",\n        \"direccionUsuario\": \"casaaa ccd\",\n        \"telefonoUsuario\": \"9658632552\",\n        \"email\": \"algo@ak.cl\",\n        \"password\": \"12345\",\n        \"rol\": \"xx\"\n}"
+										},
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/UpdateUsers",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"UpdateUsers"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:24:51 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"description\": \"ERRFER008\",\n    \"type\": \"No existe Registro=> 3\",\n    \"code\": 404\n}"
+								}
+							]
+						},
+						{
+							"name": "GetAllProductoAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/GetAllProductoAdmin",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"GetAllProductoAdmin"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAllProductoAdmin200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/GetAllProductoAdmin",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"GetAllProductoAdmin"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:31:00 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"nombreProveedor\": \"casa matriz2\",\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"nombreProveedor\": \"casa matriz\",\n        \"descProducto\": \"Martillo electrico\",\n        \"valorProducto\": 10000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"nombreProveedor\": \"casa matriz\",\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"nombreProveedor\": \"casa matriz2\",\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "addProducto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 0,\n  \"idProveedor\": 0,\n  \"descProducto\": \"string\",\n  \"valorProducto\": 0,\n  \"cantidadProducto\": 0\n}"
+								},
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/addProducto",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"addProducto"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "addProducto200",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \n  \"idProveedor\": 1,\n  \"descProducto\": \"Pala\",\n  \"valorProducto\": 5000,\n  \"cantidadProducto\": 100\n}"
+										},
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/addProducto",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"addProducto"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:40:54 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"idProveedor\": 2,\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 2,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo electrico\",\n        \"valorProducto\": 10000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 3,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 4,\n        \"idProveedor\": 2,\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 5,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Pala\",\n        \"valorProducto\": 5000,\n        \"cantidadProducto\": 100\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "DeleteProducto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/DeleteProducto?id=4",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"DeleteProducto"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "DeleteProducto200",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/DeleteProducto?id=4",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"DeleteProducto"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:42:22 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"idProveedor\": 2,\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 2,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo electrico\",\n        \"valorProducto\": 10000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 3,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 5,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Pala\",\n        \"valorProducto\": 5000,\n        \"cantidadProducto\": 100\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "UpdateProducto",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"id\": 3,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    }"
+								},
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/UpdateProducto",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"UpdateProducto"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "UpdateProducto200",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n        \"id\": 3,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 50\n    }"
+										},
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/UpdateProducto",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"UpdateProducto"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 10:43:51 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"idProveedor\": 2,\n        \"descProducto\": \"Combo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 2,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo electrico\",\n        \"valorProducto\": 10000,\n        \"cantidadProducto\": 10\n    },\n    {\n        \"id\": 3,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Martillo\",\n        \"valorProducto\": 1000,\n        \"cantidadProducto\": 50\n    },\n    {\n        \"id\": 5,\n        \"idProveedor\": 1,\n        \"descProducto\": \"Pala\",\n        \"valorProducto\": 5000,\n        \"cantidadProducto\": 100\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "GetAllCarroHistAdm",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/GetAllCarroHistAdm",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"GetAllCarroHistAdm"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAllCarroHistAdm404",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "accept",
+												"value": "text/plain"
+											}
+										],
+										"url": {
+											"raw": "https://localhost:7017/api/Ferreteria/GetAllCarroHistAdm?id=1",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7017",
+											"path": [
+												"api",
+												"Ferreteria",
+												"GetAllCarroHistAdm"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 18 Jan 2024 11:03:23 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "Kestrel"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"description\": \"ERRFER017\",\n    \"type\": \"No Existe registro solicitado 0\",\n    \"code\": 404\n}"
+								}
+							]
+						},
+						{
+							"name": "DeleteCarro",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{Jwtoken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "https://localhost:7017/api/Ferreteria/DeleteCarro?id=1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "7017",
+									"path": [
+										"api",
+										"Ferreteria",
+										"DeleteCarro"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"emaillogin\": \"georgeherresan@icloud.com\",\n  \"passwordLogin\": \"Herresan1981\"\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Login",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProductos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListaCarro_Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7017/api/Ferreteria/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Ferreteria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddCarro",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Jwtoken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 0,\n  \"idProducto\": 0,\n  \"idUsuario\": 0,\n  \"idMedioPago\": 0,\n  \"idDespacho\": 0,\n  \"cantidad\": 0\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7017/api/Ferreteria/AddCarro",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7017",
+							"path": [
+								"api",
+								"Ferreteria",
+								"AddCarro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://localhost:7017/"
+		},
+		{
+			"key": "getUsuario",
+			"value": "api/Usuario"
+		},
+		{
+			"key": "api/Ferreteria",
+			"value": "{{Ferreteria}}"
+		},
+		{
+			"key": "Ferreteria",
+			"value": "api/Ferreteria"
+		},
+		{
+			"key": "Ferreteria",
+			"value": ""
+		},
+		{
+			"key": "en",
+			"value": ""
+		},
+		{
+			"key": "jwt",
+			"value": ""
+		},
+		{
+			"key": "Jwtkey",
+			"value": ""
+		}
+	]
+}
