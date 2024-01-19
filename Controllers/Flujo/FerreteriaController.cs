@@ -314,7 +314,7 @@ namespace FerreteriaJuanito.Controllers.Flujo
         }
         [HttpGet("GetAllCarroHistAdm")]
         [Authorize(Roles = ("Administrador"))]
-        public async Task<ActionResult<List<CarroCompra>>> GetAllCarroHistAdm([FromRoute] int id, [FromHeader] string Authorization)
+        public async Task<ActionResult<List<CarroCompra>>> GetAllCarroHistAdm([FromQuery] int id, [FromHeader] string Authorization)
         {
             var aut = Authorization;
             string key = aut.Remove(0, 7);// ("Bearer ");
